@@ -9,14 +9,31 @@
 .dashboard .upnext{margin-top:13px}.calendar-card{border:1.5px solid #dce5f4;border-radius:21px;padding:17px;box-shadow:0 7px 18px #25406d12;min-height:106px}
 .vacation-card{background:linear-gradient(135deg,#e0f3ff,#f0f7ff);border-color:#89bcf0;color:#174c80}.birthday-card{background:linear-gradient(135deg,#fff0f6,#fff8ee);border-color:#edaccb;color:#86375b}
 .calendar-kicker{font-size:12px;font-weight:850;letter-spacing:.02em;display:flex;gap:7px;align-items:center}.calendar-main{font-size:clamp(20px,3vw,27px);line-height:1.1;font-weight:900;margin:10px 0 5px}.calendar-desc{font-size:12px;line-height:1.5;font-weight:650;opacity:.84}.calendar-card .huge{font-size:clamp(28px,4vw,38px);font-variant-numeric:tabular-nums}
-.birthday-card.today-birthday{background:linear-gradient(135deg,#ffe0ea,#fff1cf);border:2px solid #e36b9d;box-shadow:0 9px 25px #e36b9d22}
+.birthday-card.no-upcoming{min-height:0;padding:14px 17px}.birthday-card.no-upcoming .calendar-main,.birthday-card.no-upcoming .calendar-desc{display:none}.birthday-card.today-birthday{background:linear-gradient(135deg,#ffe0ea,#fff1cf);border:2px solid #e36b9d;box-shadow:0 9px 25px #e36b9d22}
 @media(max-width:640px){.dashboard{grid-template-columns:1fr;gap:12px}.dashboard-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.calendar-card{min-height:124px;padding:13px}.calendar-main{font-size:20px}.calendar-card .huge{font-size:27px}.calendar-kicker{font-size:11px}.calendar-desc{font-size:11px}.dashboard .upnext{margin-top:12px}}
-@media(max-width:375px){.dashboard-side{grid-template-columns:1fr}.calendar-card{min-height:unset}}
+/* Компактные события на телефоне: расписание остаётся главным */
+@media(max-width:640px){
+ .dashboard-side{display:flex;flex-direction:column;gap:7px}
+ .calendar-card{min-height:0;padding:10px 13px;border-radius:13px;box-shadow:none}
+ .vacation-card{display:flex;align-items:center;gap:7px;flex-wrap:wrap;background:#e9f3ff;border:1px solid #c7ddf7}
+ .vacation-card .calendar-kicker{font-size:11px;white-space:nowrap;letter-spacing:0}
+ .vacation-card .calendar-main{font-size:13px;margin:0;line-height:1.3;font-weight:850}
+ .vacation-card .calendar-main .huge{font-size:17px}
+ .vacation-card .calendar-desc{flex-basis:100%;font-size:11px;line-height:1.3;margin-top:0}
+ .birthday-card{padding:11px 13px;background:#fff0f6;border:1px solid #edaccb}
+ .birthday-card .calendar-kicker{font-size:11px}
+ .birthday-card .calendar-main{font-size:14px;margin:4px 0 2px}
+ .birthday-card .calendar-desc{font-size:12px;line-height:1.4}
+ .birthday-card.no-upcoming{padding:9px 13px}
+ .birthday-card.no-upcoming .calendar-main,.birthday-card.no-upcoming .calendar-desc{display:none}
+}
+@media(max-width:375px){.dashboard-side{display:flex;flex-direction:column}.calendar-card{min-height:0}}
+
 </style></head><body><main class="wrap">
 <header><div><div class="sub">СШ № 46 · Витебск</div><h1>Расписание 7 «В»</h1><div class="sub">I полугодие 2026/2027</div></div><div><div class="clock" id="clock">--:--</div><div class="date" id="date">Время Минска</div></div></header>
 <nav class="days" id="days" aria-label="Дни недели"></nav>
 <div class="dashboard"><div class="dashboard-main"><section class="nowcard" id="nowcard" aria-live="polite"><span class="tag" id="status">Проверяем расписание</span><div class="now-subject" id="subject">Загрузка…</div><div class="now-room" id="room"></div><div class="timing" id="timing"></div></section>
-<section class="upnext" id="upnext"><div class="label" id="nextlabel">● БЛИЖАЙШИЙ УРОК</div><strong id="next">—</strong><p id="nextdetail"></p><div class="red-clock" id="nextclock"></div></section></div><aside class="dashboard-side" aria-label="События класса"><section class="calendar-card vacation-card" id="vacation"><div class="calendar-kicker">🗓️ КАНИКУЛЫ</div><div class="calendar-main" id="vacationmain">Загрузка…</div><div class="calendar-desc" id="vacationdesc"></div></section><section class="calendar-card birthday-card" id="birthday"><div class="calendar-kicker">🎂 ДНИ РОЖДЕНИЯ</div><div class="calendar-main" id="birthdaymain">Проверяем календарь…</div><div class="calendar-desc" id="birthdaydesc"></div></section></aside></div>
+<section class="upnext" id="upnext"><div class="label" id="nextlabel">● БЛИЖАЙШИЙ УРОК</div><strong id="next">—</strong><p id="nextdetail"></p><div class="red-clock" id="nextclock"></div></section></div><aside class="dashboard-side" aria-label="События класса"><section class="calendar-card vacation-card" id="vacation"><div class="calendar-kicker">🗓️ КАНИКУЛЫ</div><div class="calendar-main" id="vacationmain">Загрузка…</div><div class="calendar-desc" id="vacationdesc"></div></section><section class="calendar-card birthday-card" id="birthday"><div class="calendar-kicker">🎂 ДЕНЬ РОЖДЕНИЯ</div><div class="calendar-main" id="birthdaymain"></div><div class="calendar-desc" id="birthdaydesc"></div></section></aside></div>
 <div class="heading"><h2 id="heading">Расписание на день</h2><button class="today-btn" id="today" type="button">Сегодня ↗</button></div><div id="lessons"></div><p class="foot">Расписание 7 «В» на I полугодие 2026/2027. В четверг — информационный час (13:00, актовый зал), в пятницу — классный час (13:00, каб. 423). Время указано по Минску. Каникулы учитываются по календарю Беларуси 2026/27; разовые замены и отдельные праздничные дни не учитываются.</p>
 </main><script>
 const SCHEDULE=[[{"num":1,"start":"14:00","end":"14:45","subject":"Рус.язык","room":"403"},{"num":2,"start":"15:00","end":"15:45","subject":"Бел.лит.","room":"324"},{"num":3,"start":"16:00","end":"16:45","subject":"ФКиЗ","room":"спорт.зал"},{"num":4,"start":"16:55","end":"17:40","subject":"Труд.обучение","room":"121/132"},{"num":5,"start":"17:50","end":"18:35","subject":"Математика","room":"403"},{"num":6,"start":"18:45","end":"19:30","subject":"Биология","room":"318"}],[{"num":1,"start":"14:00","end":"14:45","subject":"Бел.язык","room":"324"},{"num":2,"start":"15:00","end":"15:45","subject":"ФКиЗ","room":"спорт.зал"},{"num":3,"start":"16:00","end":"16:45","subject":"Математика","room":"407"},{"num":4,"start":"16:55","end":"17:40","subject":"Рус.язык","room":"345"},{"num":5,"start":"17:50","end":"18:35","subject":"Рус.лит.","room":"345"},{"num":6,"start":"18:45","end":"19:30","subject":"Труд.обуч.","room":"121/132"}],[{"num":1,"start":"14:00","end":"14:45","subject":"ОМХК","room":"433"},{"num":2,"start":"15:00","end":"15:45","subject":"Физика","room":"416"},{"num":3,"start":"16:00","end":"16:45","subject":"Ист. Бел.","room":"433"},{"num":4,"start":"16:55","end":"17:40","subject":"Англ.язык","room":"404/403"},{"num":5,"start":"17:50","end":"18:35","subject":"Биология","room":"318"},{"num":6,"start":"18:45","end":"19:30","subject":"Математика","room":"435"}],[{"num":0,"start":"13:00","end":"13:45","subject":"Информационный час","room":"Актовый зал","manual":true},{"num":1,"start":"14:00","end":"14:45","subject":"Бел.язык","room":"324"},{"num":2,"start":"15:00","end":"15:45","subject":"Информатика","room":"123/125"},{"num":3,"start":"16:00","end":"16:45","subject":"Рус.лит.","room":"345"},{"num":4,"start":"16:55","end":"17:40","subject":"Англ.язык","room":"404/403"},{"num":5,"start":"17:50","end":"18:35","subject":"Истор. Всем.","room":"433"},{"num":6,"start":"18:45","end":"19:30","subject":"Математика","room":"424"}],[{"num":0,"start":"13:00","end":"13:45","subject":"Классный час","room":"423","manual":true},{"num":1,"start":"14:00","end":"14:45","subject":"География","room":"310"},{"num":2,"start":"15:00","end":"15:45","subject":"Физика","room":"416"},{"num":3,"start":"16:00","end":"16:45","subject":"Химия","room":"412"},{"num":4,"start":"16:55","end":"17:40","subject":"Англ.язык","room":"403/404"},{"num":5,"start":"17:50","end":"18:35","subject":"Математика","room":"424"},{"num":6,"start":"18:45","end":"19:30","subject":"ФКиЗ","room":"спорт.зал"}]];
@@ -43,9 +60,17 @@ function calendarRender(iso){
  const todayDescription=x=>x.name+' — исполняется '+x.age+' '+years(x.age)+'!';
  const soonDescription=x=>x.name+' — через '+x.delta+' '+wordDays(x.delta)+' исполнится '+x.age+' '+years(x.age);
  $('birthday').classList.toggle('today-birthday',birthdayToday.length>0);
- if(birthdayToday.length){$('birthdaymain').textContent='🎉 Сегодня день рождения!';$('birthdaydesc').textContent=birthdayToday.map(todayDescription).join(' · ')+(birthdaySoon.length?' · Скоро: '+birthdaySoon.map(soonDescription).join(' · '):'')}
- else if(birthdaySoon.length){$('birthdaymain').textContent='🎂 Скоро день рождения!';$('birthdaydesc').textContent=birthdaySoon.map(soonDescription).join(' · ')}
- else{$('birthdaymain').textContent='Ждём праздника 🎈';$('birthdaydesc').textContent='За 2 дня до дня рождения здесь появятся имя одноклассника и возраст.'}
+ $('birthday').classList.toggle('no-upcoming',forthcoming.length===0);
+ if(forthcoming.length){
+   $('birthdaymain').textContent=forthcoming.map(x=>x.name).join(' · ');
+   $('birthdaydesc').textContent=forthcoming.map(x=>x.delta===0
+      ? 'Сегодня исполняется '+x.age+' '+years(x.age)+' 🎉'
+      : 'Через '+x.delta+' '+wordDays(x.delta)+' исполнится '+x.age+' '+years(x.age)).join(' · ');
+ }else{
+   $('birthdaymain').textContent='';
+   $('birthdaydesc').textContent='';
+ }
+
  return current;
 }
 function dateRu(iso){const p=iso.split('-');return p[2]+'.'+p[1]+'.'+p[0]}
