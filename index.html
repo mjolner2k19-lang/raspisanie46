@@ -30,10 +30,16 @@ body[data-day="4"]{--strong:#e26491;--ink:#b84070;--pale:#fff0f6;--stroke:#f8c8d
 .lesson-icon{width:41px;height:41px;flex-shrink:0}.lesson-icon .subject-illustration{border-radius:12px;font-size:25px}.lesson-icon svg{width:87%;height:87%}
 .lesson{grid-template-columns:24px 41px minmax(0,1fr) auto!important;gap:10px!important}
 @media(max-width:520px){.hero-subject-icon{width:112px;height:91px;top:1px;right:0}.hero-subject-icon .subject-illustration{font-size:68px}.next .leaf .subject-illustration{font-size:32px}.lesson-icon{width:37px;height:37px}.lesson-icon .subject-illustration{font-size:23px}.lesson{grid-template-columns:20px 37px minmax(0,1fr) auto!important;gap:8px!important}}
+
+/* ФИО учителей — единственное изменение оформления. */
+.hero-teachers{position:relative;z-index:2;margin:-7px 0 14px;color:#526f98;font-size:clamp(12px,3vw,14px);font-weight:550;line-height:1.35;overflow-wrap:break-word}
+.hero-teachers[hidden]{display:none!important}
+.hero-teachers .teacher-item{margin:2px 0}
+@media(max-width:520px){.hero-teachers{font-size:12px;margin:-8px 0 11px}}
 </style></head><body><main>
 <header class="header"><h1>Расписание 7 «В»<br><span class="subtitle">на первое полугодие</span></h1><div class="clock" id="clock">--:--</div></header>
 <nav class="days" id="days" aria-label="Дни недели"></nav>
-<section class="hero" aria-live="polite"><div class="hero-top"><span class="chip" id="daylabel">Понедельник</span><div class="hero-subject-icon" id="heroIcon" aria-hidden="true"></div></div><h2 id="subject">Загрузка…</h2><div class="hero-info"><div class="hero-time"><svg class="small-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.7" aria-hidden="true"><circle cx="16" cy="16" r="10"/><path d="M16 9v8l5 3" stroke-linecap="round"/></svg><span id="start">--:--</span></div><div class="hero-room" id="roomwrap"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M7 29V4H25V29M3 29H29M12 10L21 8V29H12Z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="19" r="1.3" fill="currentColor" stroke="none"/></svg><span id="room">—</span><span style="font-size:26px;opacity:.85">›</span></div></div><div class="timer" id="timer"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 4a3 3 0 0 0-3 3.2 10 10 0 0 0-7 9.5v5l-3 3v2h26v-2l-3-3v-5a10 10 0 0 0-7-9.5A3 3 0 0 0 16 4ZM12 28a4 4 0 0 0 8 0Z"/></svg><span id="timertxt">Проверяем время…</span></div></section>
+<section class="hero" aria-live="polite"><div class="hero-top"><span class="chip" id="daylabel">Понедельник</span><div class="hero-subject-icon" id="heroIcon" aria-hidden="true"></div></div><h2 id="subject">Загрузка…</h2><div id="teacherLine" class="hero-teachers" hidden></div><div class="hero-info"><div class="hero-time"><svg class="small-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.7" aria-hidden="true"><circle cx="16" cy="16" r="10"/><path d="M16 9v8l5 3" stroke-linecap="round"/></svg><span id="start">--:--</span></div><div class="hero-room" id="roomwrap"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M7 29V4H25V29M3 29H29M12 10L21 8V29H12Z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="19" r="1.3" fill="currentColor" stroke="none"/></svg><span id="room">—</span><span style="font-size:26px;opacity:.85">›</span></div></div><div class="timer" id="timer"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 4a3 3 0 0 0-3 3.2 10 10 0 0 0-7 9.5v5l-3 3v2h26v-2l-3-3v-5a10 10 0 0 0-7-9.5A3 3 0 0 0 16 4ZM12 28a4 4 0 0 0 8 0Z"/></svg><span id="timertxt">Проверяем время…</span></div></section>
 <section class="next"><div class="leaf" id="nextIcon" aria-hidden="true"></div><div class="next-body"><div class="next-label" id="nextlabel">Следующий урок</div><div class="next-title" id="nextname">—</div><div class="next-detail" id="nextdetail"></div></div><span class="next-arrow">›</span></section>
 <section class="events"><div class="holiday"><div class="event-ico" id="holidayicon">🍁</div><div class="event-text"><div class="event-title" id="holidaytitle">До каникул…</div><div class="event-caption" id="holidaydate"></div></div><svg class="event-visual" viewBox="0 0 150 110" aria-hidden="true"><path d="M72 101C89 74 117 62 137 33" fill="none" stroke="#d96d31" stroke-width="3"/><path d="M92 79Q80 49 109 27Q126 43 117 62Q110 74 92 79" fill="#ff992e"/><path d="M126 45Q111 19 131 6Q150 17 140 37Z" fill="#ffbe63"/><path d="M63 104Q59 72 37 56Q8 64 25 90Q35 106 63 104" fill="#ffa844"/></svg></div><div class="birthday" id="birthday"><div class="event-ico">🎂</div><div class="event-text"><div class="event-title">День рождения</div><div class="event-name" id="birthdayname">—</div><div class="event-caption" id="birthdaydesc"></div></div><svg class="event-visual" viewBox="0 0 150 110" aria-hidden="true"><defs><linearGradient id="giftg" x2="0" y2="1"><stop stop-color="#ffc0d6"/><stop offset="1" stop-color="#ef73a2"/></linearGradient></defs><path d="M31 47h90v57H31Z" fill="url(#giftg)" stroke="#e5689b" stroke-width="2"/><path d="M24 37h104v20H24Z" fill="#ffcee0" stroke="#ed7da7" stroke-width="2"/><path d="M65 37h18v67H65Z" fill="#fff0f6"/><path d="M72 34C38 25 46 5 59 10Q70 14 76 34C82 2 107 8 107 20Q107 33 79 34" fill="none" stroke="#ef5f9a" stroke-width="9" stroke-linecap="round"/><path d="M6 52l8-5M138 24l7 4M12 18l5 8" stroke="#ff78a2" stroke-width="6" stroke-linecap="round"/></svg></div></section>
 <div class="list-heading"><h3 id="heading">Все уроки</h3><button class="today-btn" type="button" id="today">Сегодня ↗</button></div><section class="lessons" id="lessons" aria-label="Список уроков"></section><footer class="footer">7 «В» · 2026/2027</footer>
@@ -74,12 +80,82 @@ if(upcoming.length){
   : 'Через '+person.delta+' '+dayWord(person.delta)+' исполнится '+person.age+' '+yearWord(person.age);
 }
 return current}
+
+const TEACHERS={
+  "Белорусский язык": [
+    "Савченко Светлана Владимировна"
+  ],
+  "Белорусская литература": [
+    "Савченко Светлана Владимировна"
+  ],
+  "Русский язык": [
+    "Гурченко Варвара Константиновна"
+  ],
+  "Русская литература": [
+    "Гурченко Варвара Константиновна"
+  ],
+  "Математика": [],
+  "История Беларуси": [
+    "Барановская Валерия Сергеевна"
+  ],
+  "Всемирная история": [
+    "Барановская Валерия Сергеевна"
+  ],
+  "ОМХК": [
+    "Барановская Валерия Сергеевна"
+  ],
+  "География": [
+    "Саникович Жанна Петровна"
+  ],
+  "Биология": [
+    "Мачярнис Костаст Стасисович"
+  ],
+  "Физика": [
+    "Спиридонова Наталья Викторовна"
+  ],
+  "Химия": [
+    "Семенюк Дарья Александровна"
+  ],
+  "Физическая культура": [
+    "Концова Наталья Владимировна"
+  ],
+  "Английский язык": [
+    "Абесадзе Светлана Валерьевна",
+    "Елисеенко Светлана Николаевна"
+  ],
+  "Информатика": [
+    "Испеньков Андрей Никоалевич",
+    "Малистова Елена Анатольевна"
+  ],
+  "Труд.обучение": [
+    "Дубовик Людмила Георгиевна (девочки)",
+    "Осипук Леонид Аркадьевич (мальчики)"
+  ],
+  "Трудовое обучение": [
+    "Дубовик Людмила Георгиевна (девочки)",
+    "Осипук Леонид Аркадьевич (мальчики)"
+  ]
+};
+function showTeacher(subject){
+ const node=$('teacherLine');
+ const names=TEACHERS[subject]||[];
+ node.replaceChildren();
+ if(!names.length){
+   // На математике пока нет постоянного учителя; часы общения не подписываем.
+   if(subject==='Математика'){const span=document.createElement('div');span.className='teacher-item';span.textContent='Учитель уточняется';node.append(span);node.hidden=false;}
+   else node.hidden=true;
+   return;
+ }
+ names.forEach((name,i)=>{const div=document.createElement('div');div.className='teacher-item';div.textContent=(i===0?'Учитель: ':'')+name;node.append(div)});
+ node.hidden=false;
+}
+
 function render(){let t=nowMinsk();$('clock').textContent=t.time;calendar(t);const view=chosen===null?(t.day>4?0:t.day):chosen;const actual=view===t.day&&chosen===null&&!HOLIDAYS.some(h=>t.iso>=h.start&&t.iso<=h.end);const week=t.day>4&&chosen===null;const vacation=HOLIDAYS.some(h=>t.iso>=h.start&&t.iso<=h.end)&&chosen===null;const list=SCHEDULE[view];document.body.dataset.day=view;
 $('days').innerHTML=DAYNAMES.map((d,i)=>'<button type="button" class="day '+(view===i?'active':'')+'" data-i="'+i+'" aria-label="'+d+'" aria-pressed="'+(view===i)+'">'+['Пн','Вт','Ср','Чт','Пт'][i]+'</button>').join('');document.querySelectorAll('[data-i]').forEach(b=>b.onclick=()=>{chosen=Number(b.dataset.i);render()});$('today').onclick=()=>{chosen=null;render()};$('heading').textContent='Уроки · '+DAYNAMES[view].toLowerCase();
 let active=-1,firstUpcoming=-1;if(actual){for(let i=0;i<list.length;i++){if(t.mins>=toMinutes(list[i].start)&&t.mins<toMinutes(list[i].end))active=i;if(firstUpcoming===-1&&t.mins<toMinutes(list[i].start))firstUpcoming=i}}
-let heroIndex=actual?(active>=0?active:firstUpcoming>=0?firstUpcoming:list.length-1):0;let item=list[heroIndex];$('daylabel').textContent=DAYNAMES[view];$('subject').textContent=item.subject==='Информационный час'?'Информ. час':item.subject;$('heroIcon').innerHTML=lessonIcon(item.subject);$('start').textContent=item.start;$('room').textContent=item.room;$('roomwrap').style.display=item.room?'inline-flex':'none';let message='';
+let heroIndex=actual?(active>=0?active:firstUpcoming>=0?firstUpcoming:list.length-1):0;let item=list[heroIndex];$('daylabel').textContent=DAYNAMES[view];$('subject').textContent=item.subject;showTeacher(item.subject);$('heroIcon').innerHTML=lessonIcon(item.subject);$('start').textContent=item.start;$('room').textContent=item.room;$('roomwrap').style.display=item.room?'inline-flex':'none';let message='';
 if(week)message='Первый урок в понедельник';else if(vacation)message='Сейчас каникулы';else if(!actual)message='Первый урок · '+item.start;else if(active>=0)message='До звонка: '+(toMinutes(item.end)-t.mins)+' мин';else if(firstUpcoming>=0)message='До урока: '+(toMinutes(item.start)-t.mins)+' мин';else message='Уроки на сегодня закончились';$('timertxt').textContent=message;
-let nextIdx=heroIndex+1,nday=view;if(nextIdx>=list.length){nextIdx=0;nday=(view+1)%5}let next=SCHEDULE[nday][nextIdx];$('nextlabel').textContent=nday===view?'Следующий урок':'Следующий учебный день';$('nextname').textContent=next.subject==='Информационный час'?'Информ. час':next.subject;$('nextIcon').innerHTML=lessonIcon(next.subject);$('nextdetail').textContent=(nday===view?'':DAYNAMES[nday]+' · ')+next.start+' · '+next.room;
-$('lessons').innerHTML=list.map((x,i)=>'<article class="lesson '+(actual&&i===active?'active':'')+'"><span class="num">'+x.num+'</span><span class="lesson-icon">'+lessonIcon(x.subject)+'</span><div><div class="name"></div><div class="hours">'+x.start+'–'+x.end+'</div></div><div class="room"></div></article>').join('');Array.from($('lessons').children).forEach((el,i)=>{el.querySelector('.name').textContent=list[i].subject==='Информационный час'?'Информ. час':list[i].subject;el.querySelector('.room').textContent=list[i].room});}
+let nextIdx=heroIndex+1,nday=view;if(nextIdx>=list.length){nextIdx=0;nday=(view+1)%5}let next=SCHEDULE[nday][nextIdx];$('nextlabel').textContent=nday===view?'Следующий урок':'Следующий учебный день';$('nextname').textContent=next.subject;$('nextIcon').innerHTML=lessonIcon(next.subject);$('nextdetail').textContent=(nday===view?'':DAYNAMES[nday]+' · ')+next.start+' · '+next.room;
+$('lessons').innerHTML=list.map((x,i)=>'<article class="lesson '+(actual&&i===active?'active':'')+'"><span class="num">'+x.num+'</span><span class="lesson-icon">'+lessonIcon(x.subject)+'</span><div><div class="name"></div><div class="hours">'+x.start+'–'+x.end+'</div></div><div class="room"></div></article>').join('');Array.from($('lessons').children).forEach((el,i)=>{el.querySelector('.name').textContent=list[i].subject;el.querySelector('.room').textContent=list[i].room});}
 render();setInterval(render,15000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)render()});
 </script></body></html>
