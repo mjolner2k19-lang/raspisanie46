@@ -413,7 +413,6 @@ if('serviceWorker' in navigator && (location.protocol==='https:' || location.hos
 }
 
 DAYNAMES.forEach((name,i)=>{const b=document.createElement('button');b.type='button';b.className='day';b.textContent=['ПН','ВТ','СР','ЧТ','ПТ'][i];b.setAttribute('aria-label',name);b.onclick=()=>{chosen=i;render()};$('days').append(b)});$('today').onclick=()=>{chosen=null;render()};render();setInterval(render,1000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)render()});
-</script></body></html>
 // Подключение расписания 7 «В» к Supabase
 const SUPABASE_URL = 'https://deewobvfbxwnhvwametp.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_Sw5QiPET3YpZSdZUPVBoCA_klZw3bfv';
@@ -461,6 +460,8 @@ async function loadScheduleFromSupabase() {
     }
 
     weekCache = '';
+    lastListKey = '';
+    lastEvents = '';
     render();
     console.log('Расписание обновлено из Supabase');
   } catch (error) {
