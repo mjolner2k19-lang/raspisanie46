@@ -3,7 +3,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <link rel="manifest" href="manifest.webmanifest"><link rel="icon" type="image/png" href="icon-192.png"><meta name="theme-color" content="#eeede8"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="7 «В»">
 <title>SchoolOS · 7 «В»</title>
-<script>try{const t=localStorage.getItem('s46-7v-theme')||'auto';document.documentElement.dataset.themeMode=['light','dark','auto'].includes(t)?t:'auto';document.documentElement.dataset.theme=t==='dark'||t==='auto'&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){document.documentElement.dataset.theme='light'}</script><script>try{if(localStorage.getItem('s46-7v-text-size')==='large')document.documentElement.dataset.textSize='large'}catch(e){}</script><script>try{const a=localStorage.getItem('s46-7v-accent');document.documentElement.dataset.accent=['yellow','mint','blue','purple','red'].includes(a)?a:'yellow'}catch(e){document.documentElement.dataset.accent='yellow'}</script><style>
+<script>try{const t=localStorage.getItem('s46-7v-theme')||'dark';document.documentElement.dataset.themeMode=['light','dark','auto'].includes(t)?t:'auto';document.documentElement.dataset.theme=t==='dark'||t==='auto'&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){document.documentElement.dataset.theme='light'}</script><script>try{if(localStorage.getItem('s46-7v-text-size')==='large')document.documentElement.dataset.textSize='large'}catch(e){}</script><script>document.documentElement.dataset.palette=document.documentElement.dataset.theme==='dark'?'oled':'default'</script><script>try{const a=localStorage.getItem('s46-7v-accent');document.documentElement.dataset.accent=['yellow','mint','blue','purple','red'].includes(a)?a:'yellow'}catch(e){document.documentElement.dataset.accent='yellow'}</script><style>
 :root{color-scheme:dark;--bg:#071a30;--text:#edf4fc;--muted:#a8bfd6;--gold:#ffcb68;--line:#79afe43d;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-synthesis:none}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--bg);background-image:radial-gradient(ellipse at 100% 0,#27578380,transparent 55%),radial-gradient(ellipse at 0 80%,#133f6950,transparent 65%);background-attachment:fixed;color:var(--text)}button{font:inherit;color:inherit;cursor:pointer}button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}main{max-width:780px;margin:auto;padding:30px 20px 40px}.header{display:flex;justify-content:space-between;align-items:center;gap:18px}h1{font-size:30px;margin:0;letter-spacing:-1px;line-height:1.2}.subtitle{font-size:12px;color:var(--muted);margin-top:7px}.clock{font-size:31px;color:#b9d9f8;font-variant-numeric:tabular-nums;letter-spacing:-1px}.date{color:#a5c0da;font-size:12px;margin-top:22px}.days{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin:16px 0 20px}.day{height:49px;background:linear-gradient(135deg,#719ddc1a,#669cdc0b);border:1px solid var(--line);border-radius:9px;color:#bdcfe1;font-size:14px;font-weight:600;transition:background .2s}.day.active{background:linear-gradient(135deg,#ffdc89,#edac35);border-color:#ffde91;color:#19212b;box-shadow:0 4px 20px #ffca6814}.glass{background:linear-gradient(115deg,#6e9bd811,#7caee629);border:1px solid var(--line);box-shadow:inset 0 1px #d3e6ff08;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}.hero{overflow:hidden;border-radius:15px}.hero-main{padding:23px 24px 19px}.status{font-size:11px;letter-spacing:1.7px;font-weight:700;color:var(--gold);display:flex;align-items:center;gap:8px}.status:before{content:"";height:6px;width:6px;background:var(--gold);border-radius:50%;box-shadow:0 0 12px #ffd17a55}h2{font-size:32px;line-height:1.13;letter-spacing:-.7px;margin:17px 0 10px;overflow-wrap:anywhere}.teachers{color:#b4c7db;font-size:13px;line-height:1.6}.hero-bottom{border-top:1px solid var(--line);padding:18px 24px 19px;background:#04132620}.metrics{display:grid;grid-template-columns:1fr 1fr 1.1fr;align-items:center}.metric{padding:0 15px;border-left:1px solid var(--line);min-width:0}.metric:first-child{padding-left:0;border:0}.metric:last-child{padding-right:0}.label{font-size:10px;color:#9bb5ce;display:block;margin-bottom:5px}.time{font-size:21px;font-weight:650;white-space:nowrap;letter-spacing:-.4px;font-variant-numeric:tabular-nums}.hero-room{font-size:17px;overflow-wrap:anywhere}.count{font-size:29px;line-height:1.15;font-weight:700;color:var(--gold);letter-spacing:-.7px;font-variant-numeric:tabular-nums}.track{height:7px;background:repeating-linear-gradient(90deg,#638bb54d 0 9px,transparent 9px 11px);border-radius:3px;overflow:hidden;margin-top:18px}.fill{height:100%;width:0;background:repeating-linear-gradient(90deg,#ffcb68 0 9px,transparent 9px 11px);transition:width 1s linear}.next{border-radius:12px;padding:17px 21px;margin-top:12px}.next-label{font-size:11px;color:#a2bdd6}.next-title{font-size:20px;font-weight:650;margin-top:6px;letter-spacing:-.3px}.next-meta{font-size:12px;color:#a7c0d8;margin-top:7px}.events{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:13px}.event{border-radius:12px;padding:17px 18px;min-width:0}.events.single{grid-template-columns:1fr}.event-label{font-size:11px;color:#a3bdd5;line-height:1.4}.event-value{font-size:22px;font-weight:650;margin-top:8px;letter-spacing:-.4px;color:#b9d9fa;overflow-wrap:anywhere}.birthday-value{font-size:18px;color:#ecf4fd}.event-meta{font-size:11px;color:#9fb8cf;margin-top:7px;line-height:1.5}.list-header{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:25px 1px 13px}h3{font-size:18px;font-weight:650;letter-spacing:-.3px;margin:0}.today{padding:8px 12px;background:#75abe00b;border:1px solid var(--line);border-radius:8px;font-size:12px;color:#b4cce1}.lessons{display:grid;gap:6px}.lesson{display:grid;grid-template-columns:30px minmax(0,1fr) auto;gap:14px;align-items:center;padding:13px 17px;border-radius:9px;transition:background .3s,border-color .3s}.num{color:#b4d0ec;font-size:17px;font-variant-numeric:tabular-nums;border-right:1px solid var(--line);align-self:stretch;display:flex;align-items:center}.name{font-size:15px;font-weight:600;line-height:1.3;overflow-wrap:anywhere}.hours{color:#9bb5cf;font-size:12px;margin-top:4px;font-variant-numeric:tabular-nums}.room{font-size:13px;text-align:right;color:#b1c9df;max-width:105px;overflow-wrap:anywhere}.lesson.current{background:linear-gradient(110deg,#eeb34c30,#d8a13b14);border-color:#ffcc6880;box-shadow:inset 3px 0 #ffcc68}.current .num,.current .hours{color:#ffcf78}.lesson.past{background:#101d2b80;border-color:#6e7e8e23;box-shadow:none}.past .num,.past .name,.past .hours,.past .room{color:#7e8d9e}.past .name{font-weight:500}.past .num{border-color:#6e7e8e23}.footer{text-align:center;color:#708ca6;font-size:10px;letter-spacing:1px;margin-top:25px}[hidden]{display:none!important}
 @media(max-width:520px){main{padding:25px 14px 32px}h1{font-size:25px}.clock{font-size:27px}.subtitle{font-size:11px}.date{margin-top:19px}.days{gap:7px}.hero-main{padding:21px 18px 17px}h2{font-size:29px}.teachers{font-size:12px}.hero-bottom{padding:16px 18px 18px}.metric{padding:0 10px}.time{font-size:17px}.hero-room{font-size:14px}.count{font-size:25px}.label{font-size:9px}.next{padding:16px 18px}.next-title{font-size:19px}.event{padding:15px 14px}.event-value{font-size:20px}.birthday-value{font-size:16px}.lesson{padding:13px 12px;grid-template-columns:24px minmax(0,1fr) auto;gap:10px}.name{font-size:14px}.room{font-size:12px;max-width:80px}.hours{font-size:11px}h3{font-size:16px}}
 @media(max-width:360px){h1{font-size:22px}.clock{font-size:24px}.time{font-size:15px}.hero-room{font-size:12px}.count{font-size:22px}.metric{padding:0 8px}.events{grid-template-columns:1fr}.name{font-size:13px}}
@@ -199,13 +199,159 @@ html[data-theme="dark"] .school-slogan,html[data-theme="dark"] .morning-head{col
 .admin-editor-head{display:flex;gap:9px;justify-content:space-between;align-items:center;margin:10px 0}.admin-editor-head select{border:1px solid #bbb;border-radius:9px;padding:9px;background:white;color:#222}
 html[data-theme="dark"] .admin-dialog{background:#202936;color:#f2f5fb;border-color:#526074}html[data-theme="dark"] .admin-form label,html[data-theme="dark"] .admin-editor-row label{color:#c4cedb}
 @media(max-width:700px){.admin-dialog{padding:17px}.admin-editor-row{grid-template-columns:24px minmax(0,1fr) minmax(0,1fr);gap:9px}.admin-editor-row label:nth-child(2){grid-column:2/-1}.admin-editor-row label:nth-child(3){grid-column:2}.admin-editor-row label:nth-child(4){grid-column:3}.admin-editor-row label:nth-child(5){grid-column:2/-1}}
+
+/* Обновление оформления: цельный блок уроков без внутренних прямоугольников. */
+.lessons .lesson.glass,
+.lessons .lesson.glass.past{
+ background:transparent!important;
+ border:0!important;
+ border-radius:0!important;
+ box-shadow:none!important;
+ backdrop-filter:none!important;
+ -webkit-backdrop-filter:none!important;
+}
+.lessons .lesson.glass:not(:last-of-type){border-bottom:1px solid #777d8428!important}
+html[data-theme="dark"] .lessons .lesson.glass:not(:last-of-type){border-bottom-color:#c4d0cb20!important}
+/* Для текущего урока сохраняется отдельная плавная золотистая подсветка. */
+.lessons .lesson-highlight{border-radius:17px}
+/* Кнопка входа видна сразу вверху и повторяет золотистую палитру дней недели. */
+.admin-top{display:flex;justify-content:center;margin:16px 0 0}
+.admin-top .admin-launch{
+ display:inline-flex;align-items:center;justify-content:center;
+ min-height:42px;margin:0;padding:10px 25px;
+ border:1px solid #e3b847;border-radius:999px;
+ background:linear-gradient(145deg,#fff1b2,#ffd55b 60%,#f7dc82);
+ box-shadow:inset 0 1px 1px #fff9,0 3px 13px #b7972730;
+ color:#392c0b;font-weight:650;font-size:13px;
+}
+html[data-theme="dark"] .admin-top .admin-launch{
+ background:linear-gradient(145deg,#ffe8a0,#dfb74f);
+ border-color:#dfc16e;color:#30260d;
+}
+.admin-top .admin-launch:active{transform:scale(.98)}
+/* По пожеланию скрываем резюме дня и ненужный нижний блок настроек;
+   элементы остаются в DOM для совместимости с текущим JavaScript. */
+#daySummary,.bottom-settings .settings-caption{display:none!important}
+
+/* Незаметный доступ владельца слева, персонализация справа. */
+.bottom-utility-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin:22px 2px 0}
+.bottom-utility-row>.admin-launch{flex:0 0 40px;width:40px;height:40px;min-height:40px;display:grid;place-items:center;margin:0;padding:0;border-radius:50%;border:1px solid #deba65;background:linear-gradient(145deg,#fff4c6,#f1d074);box-shadow:inset 0 1px #fff8,0 2px 9px #aa893522;color:#735511;font-size:17px;line-height:1}
+.bottom-utility-row>.admin-launch:active{transform:scale(.95)}
+.bottom-utility-row>.bottom-settings{flex:1;min-width:0;margin:0!important;padding:0;border:0;display:flex;flex-direction:column;align-items:flex-end}
+.bottom-utility-row .inline-appearance{margin:0}
+.bottom-utility-row .view-toolbar{width:100%;display:flex;justify-content:flex-end;flex-wrap:wrap;gap:8px}
+html[data-theme="dark"] .bottom-utility-row>.admin-launch{background:linear-gradient(145deg,#8b7338,#695727);border-color:#b99a54;color:#f9dfa0;box-shadow:inset 0 1px #ffffff22}
+@media(max-width:520px){.bottom-utility-row{gap:8px}.bottom-utility-row>.admin-launch{flex-basis:36px;width:36px;height:36px}.bottom-utility-row .view-toolbar{gap:7px}}
+
+/* Исправление мобильной компоновки нижних элементов управления:
+   переключатель День/Неделя закреплён справа, а не под звёздочкой. */
+.bottom-utility-row{position:relative;display:block;min-height:100px;margin:22px 2px 0}
+.bottom-utility-row>.admin-launch{position:absolute;left:0;bottom:3px;z-index:2}
+.bottom-utility-row>.bottom-settings{width:100%;display:flex;flex-direction:column;align-items:flex-end}
+.bottom-utility-row .inline-appearance{width:100%;justify-content:flex-end}
+.bottom-utility-row .view-toolbar{width:100%;display:flex;flex-wrap:nowrap;flex-direction:column;align-items:flex-end;justify-content:flex-start;gap:9px;margin-top:11px}
+.bottom-utility-row .view-switch{flex:none;align-self:flex-end;margin-left:auto}
+.bottom-utility-row .accent-options{flex:none;align-self:flex-end;margin-left:auto}
+@media(max-width:520px){.bottom-utility-row{min-height:126px}.bottom-utility-row .view-toolbar{gap:7px}}
+
+/* Нижняя панель: День/Неделя над звездой слева, оформление справа. */
+.bottom-utility-row{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto;gap:10px 12px;align-items:center;min-height:0;position:relative;margin:22px 2px 0}
+.bottom-utility-row>.admin-launch{position:static;grid-column:1;grid-row:2;justify-self:start;align-self:center}
+.bottom-utility-row>.bottom-settings,.bottom-utility-row .view-toolbar{display:contents}
+.bottom-utility-row .inline-appearance{grid-column:2;grid-row:1;justify-self:end;width:auto;margin:0}
+.bottom-utility-row .view-switch{grid-column:1;grid-row:1;justify-self:start;align-self:center;margin:0;max-width:100%}
+.bottom-utility-row .accent-options{grid-column:2;grid-row:2;justify-self:end;align-self:center;margin:0;max-width:100%}
+@media(max-width:520px){.bottom-utility-row{gap:9px 8px;min-height:0}.bottom-utility-row .view-switch{margin:0}.bottom-utility-row .accent-options{margin:0}}
+
+/* Дополнительные законченные палитры оформления (не акцентные цвета). */
+.palette-picker{grid-column:1/-1;grid-row:3;display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-width:0;margin:3px 0 0;color:#747b84;font-size:12px}
+.palette-picker select{min-width:0;max-width:min(100%,230px);padding:10px 12px;font:inherit;color:inherit;border:1px solid #a4aab044;border-radius:14px;background:#ffffff53;box-shadow:inset 0 1px #ffffff70;cursor:pointer}
+html[data-theme="dark"] .palette-picker{color:#b4bfd0}
+html[data-theme="dark"] .palette-picker select{background:#202838;color:#e8edf7;border-color:#aabbd03d}
+/* Тёмная тема — чёрный OLED; светлая — исходная светлая. */
+html[data-theme="dark"]{--palette-bg:#030405;--palette-high:#181a1e;--palette-low:#0b0c0e;--palette-glass:#25272ac2;--palette-stroke:#aab2bc30;--palette-ink:#f4f5f7;--palette-secondary:#b6bbc4}
+html[data-theme="dark"] body{background-color:var(--palette-bg)!important;background-image:radial-gradient(ellipse at 100% 0,var(--palette-high),transparent 70%),linear-gradient(145deg,var(--palette-bg),var(--palette-low))!important;color:var(--palette-ink)!important}
+html[data-theme="dark"] .glass,
+html[data-theme="dark"] .days,
+html[data-theme="dark"] .today,
+html[data-theme="dark"] .lessons,
+html[data-theme="dark"] .week-day{background:var(--palette-glass)!important;border-color:var(--palette-stroke)!important;box-shadow:inset 0 1px #ffffff12,0 7px 23px #0003!important}
+html[data-theme="dark"] .floating-controls .days{background:var(--palette-glass)!important}
+html[data-theme="dark"] :is(h1,h2,h3,.clock,.time,.hero-room,.next-title,.event-value,.lesson .name,.week-day .name){color:var(--palette-ink)!important}
+html[data-theme="dark"] :is(.subtitle,.date,.teachers,.next-label,.next-meta,.event-label,.event-meta,.label,.hours,.room,.day-summary,.mini-room,.event-label){color:var(--palette-secondary)!important}
+html[data-theme="dark"] .mini-lesson{background:var(--palette-high)!important;color:var(--palette-ink)!important;border-color:var(--palette-stroke)!important}
+html[data-theme="dark"] .theme-toggle,
+html[data-theme="dark"] .text-toggle,
+html[data-theme="dark"] .view-switch{background:var(--palette-glass)!important;border-color:var(--palette-stroke)!important;color:var(--palette-ink)!important}
+html[data-theme="dark"] .lesson.glass{background:transparent!important;border:0!important;border-bottom:1px solid var(--palette-stroke)!important;box-shadow:none!important}
+html[data-theme="dark"] .lesson.past .name{color:var(--palette-secondary)!important;opacity:.7}
+html[data-theme="dark"] .lesson.current .name{color:var(--palette-ink)!important}
+
+
+/* Единая динамическая палитра акцентов: дни, текущий урок и вход администратора. */
+html[data-accent] .days:before,
+html[data-accent][data-theme="dark"] .days:before{
+ background:linear-gradient(160deg,rgb(var(--accent-rgb)/.42),rgb(var(--accent-rgb)/.83) 52%,rgb(var(--accent-rgb)/.47))!important;
+ border:1px solid rgb(var(--accent-rgb)/.86)!important;
+ box-shadow:inset 0 1px 1px #ffffff65,0 2px 10px rgb(var(--accent-rgb)/.19)!important;
+}
+html[data-accent] .day.active,
+html[data-accent][data-theme="dark"] .day.active{color:var(--accent-day-ink,#172023)!important}
+html[data-accent] .lessons .lesson-highlight,
+html[data-accent][data-theme="dark"] .lessons .lesson-highlight{
+ border:1.5px solid rgb(var(--accent-rgb)/.85)!important;
+ background:rgb(var(--accent-rgb)/.105)!important;
+ box-shadow:inset 0 1px 0 rgb(var(--accent-rgb)/.12),0 0 0 1px rgb(var(--accent-rgb)/.13)!important;
+}
+html[data-accent] .bottom-utility-row>.admin-launch,
+html[data-accent][data-theme="dark"] .bottom-utility-row>.admin-launch{
+ background:linear-gradient(145deg,rgb(var(--accent-rgb)/.40),rgb(var(--accent-rgb)/.75))!important;
+ border:1px solid rgb(var(--accent-rgb)/.94)!important;
+ color:var(--accent-day-ink,#172023)!important;
+ box-shadow:inset 0 1px 1px #ffffff58,0 3px 11px rgb(var(--accent-rgb)/.22)!important;
+}
+html[data-theme="dark"][data-accent] .bottom-utility-row>.admin-launch{
+ color:var(--accent-bright)!important;
+ background:linear-gradient(145deg,rgb(var(--accent-rgb)/.30),rgb(var(--accent-rgb)/.55))!important;
+}
+html[data-theme="dark"][data-accent] .day.active{color:#f8fafc!important;text-shadow:0 1px 2px #0009}
+
+
+/* Минималистичная погода над центральным днем, независима от режима расписания. */
+.weather-over-days{height:65px;margin:7px auto -15px;display:flex;align-items:center;justify-content:center;position:relative;width:95px;color:var(--text);pointer-events:none}
+.weather-over-days[hidden]{display:none!important}
+.weather-art{width:68px;height:57px;display:block}
+.weather-art svg{width:100%;height:100%;display:block;overflow:visible}
+.weather-degree{position:absolute;left:50%;top:50%;transform:translate(-50%,-41%);font-size:15px;font-weight:700;letter-spacing:-.6px;font-variant-numeric:tabular-nums;background:var(--weather-label-bg,#f7f7f5);border-radius:12px;padding:1px 3px;white-space:nowrap;line-height:1.25}
+html[data-theme="dark"] .weather-over-days{color:#e7ebf3;--weather-label-bg:#0c0d0f}
+html[data-theme="light"] .weather-over-days{color:#323840;--weather-label-bg:#f5f5f1}
+html[data-view="week"] .weather-over-days{display:flex!important}
+.weather-over-days+.floating-controls{margin-top:7px}
+@media(max-width:520px){.weather-over-days{height:61px;margin:4px auto -12px}.weather-art{width:64px;height:53px}}
+
+/* Погода в одной строке с названием класса и часами, без отдельной высокой полосы. */
+.header{position:relative;display:grid!important;grid-template-columns:minmax(0,1fr) 72px minmax(0,1fr)!important;align-items:center!important;gap:7px!important}
+.header>.weather-over-days{grid-column:2;grid-row:1;width:72px;height:54px;margin:0!important;position:relative;justify-self:center;align-self:center;display:flex}
+.header>.weather-over-days .weather-art{width:60px;height:51px}
+.header>.header-actions{grid-column:3;grid-row:1;justify-self:end;align-self:center}
+.header>div:first-child{grid-column:1;grid-row:1;min-width:0}
+.header>.weather-over-days .weather-degree{font-size:13px}
+.header+.week-view+.floating-controls{margin-top:14px}
+@media(max-width:520px){
+.header{grid-template-columns:minmax(0,1fr) 58px minmax(0,1fr)!important;gap:3px!important}
+.header>.weather-over-days{width:58px;height:46px}
+.header>.weather-over-days .weather-art{width:52px;height:45px}
+.header>.weather-over-days .weather-degree{font-size:12px}
+.header+.week-view+.floating-controls{margin-top:12px}
+}
 </style></head><body><main>
-<header class="header"><div><h1>7 «В»</h1><div id="date" class="date"></div></div><div class="header-actions"><time id="clock" class="clock">--:--</time></div></header>
+<header class="header"><div><h1>7 «В»</h1><div id="date" class="date"></div></div><div class="weather-over-days" id="weatherNow" aria-label="Погода в Витебске" title="Погода в Витебске"><span class="weather-art" id="weatherArt" aria-hidden="true"></span><span class="weather-degree" id="weatherDegree"></span></div><div class="header-actions"><time id="clock" class="clock">--:--</time></div></header>
+
 <section class="week-view" id="weekView" aria-label="Расписание на неделю" hidden></section><div class="floating-controls" id="floatingControls"><nav class="days" id="days" aria-label="Дни недели"></nav><div class="mini-holder" id="miniHolder" aria-hidden="true"><div class="mini-clip"><button class="mini-lesson" type="button" id="miniLesson" tabindex="-1" aria-label="Вернуться к карточке урока"><span class="mini-left"><span id="miniSubject" class="mini-subject"></span><span id="miniRoom" class="mini-room"></span></span><span class="mini-right"><span id="miniLabel" class="mini-label"></span><span id="miniCount" class="mini-count"></span></span><span class="mini-return" aria-hidden="true">↗</span></button></div></div></div>
 <div class="swipe-note">Выбери день или листай в сторону</div><div class="day-content" id="dayContent"><section class="hero glass" aria-label="Текущий или ближайший урок"><div class="hero-main"><div class="status" id="status"></div><h2 id="subject"></h2><div class="break-subject" id="breakSubject" hidden></div><div id="teachers" class="teachers"></div></div><div class="hero-bottom"><div class="metrics"><div class="metric"><span class="label" id="lessonTimeLabel">Время</span><div class="time" id="time"></div></div><div class="metric"><span class="label">Кабинет</span><div class="hero-room" id="heroRoom"></div></div><div class="metric timer-metric"><div class="ring-timer"><svg class="timer-ring" viewBox="0 0 220 220" aria-hidden="true"><circle class="ring-track" cx="110" cy="110" r="103"/><circle id="ringArc" class="ring-arc" cx="110" cy="110" r="103" pathLength="100"/><circle id="ringTip" class="ring-tip" cx="213" cy="110" r="4.3"/></svg><div class="ring-copy"><div class="count" id="count"></div><span class="label" id="countLabel"></span></div></div></div></div><div id="progress" class="track" role="progressbar" aria-label="Прошедшее время урока" aria-valuemin="0" aria-valuemax="100"><div class="fill" id="fill"></div></div></div></section>
 <section class="next glass"><div class="next-label" id="nextLabel">Следующий урок</div><div class="next-title" id="nextTitle"></div><div class="next-meta" id="nextMeta"></div><span id="nextRoomPill" class="next-room-pill" aria-label="Кабинет"></span></section>
 
-<div class="day-summary" id="daySummary"></div><div class="list-header"><h3 id="heading"></h3><button class="today" type="button" id="today">Сегодня ↗</button></div><section class="lessons" id="lessons" aria-label="Все уроки"></section></div><section id="events" class="events"><article class="event glass"><div id="holidayLabel" class="event-label"></div><div id="holidayValue" class="event-value"></div><div id="holidayMeta" class="event-meta"></div></article><article class="event glass" id="birthday" hidden><div class="event-label">День рождения</div><div class="event-value birthday-value" id="birthdayName"></div><div class="event-meta" id="birthdayMeta"></div></article></section><section class="bottom-settings" aria-label="Вид расписания и оформление"><div class="settings-caption">Вид и оформление</div><section class="inline-appearance" aria-label="Оформление расписания"><div class="display-tools"><button type="button" class="text-toggle" id="textSizeToggle" aria-label="Включить крупный текст" aria-pressed="false" title="Размер текста">Аа</button><button type="button" class="theme-toggle" id="themeToggle" aria-label="Включить тёмную тему" aria-pressed="false">☾ Тёмная</button></div></section><div class="view-toolbar"><div class="view-switch" role="group" aria-label="Вид расписания"><button id="dayViewButton" type="button" aria-pressed="true">День</button><button id="weekViewButton" type="button" aria-pressed="false">Неделя</button></div><div class="accent-options" role="group" aria-label="Акцентный цвет"><button type="button" class="accent-dot" data-accent="yellow" aria-label="Жёлтый акцент" aria-pressed="true"></button><button type="button" class="accent-dot" data-accent="mint" aria-label="Мятный акцент" aria-pressed="false"></button><button type="button" class="accent-dot" data-accent="blue" aria-label="Голубой акцент" aria-pressed="false"></button><button type="button" class="accent-dot" data-accent="purple" aria-label="Сиреневый акцент" aria-pressed="false"></button><button type="button" class="accent-dot" data-accent="red" aria-label="Красный акцент" aria-pressed="false"></button></div></div></section><footer class="footer">7 «В» · 2026/2027 · Время по Минску</footer>
+<div class="day-summary" id="daySummary"></div><div class="list-header"><h3 id="heading"></h3><button class="today" type="button" id="today">Сегодня ↗</button></div><section class="lessons" id="lessons" aria-label="Все уроки"></section></div><section id="events" class="events"><article class="event glass"><div id="holidayLabel" class="event-label"></div><div id="holidayValue" class="event-value"></div><div id="holidayMeta" class="event-meta"></div></article><article class="event glass" id="birthday" hidden><div class="event-label">День рождения</div><div class="event-value birthday-value" id="birthdayName"></div><div class="event-meta" id="birthdayMeta"></div></article></section><div class="bottom-utility-row"><button type="button" id="adminLaunch" class="admin-launch" aria-label="Вход администратора" title="Вход администратора">★</button><section class="bottom-settings" aria-label="Вид расписания и оформление"><div class="settings-caption">Вид и оформление</div><section class="inline-appearance" aria-label="Оформление расписания"><div class="display-tools"><button type="button" class="text-toggle" id="textSizeToggle" aria-label="Включить крупный текст" aria-pressed="false" title="Размер текста">Аа</button><button type="button" class="theme-toggle" id="themeToggle" aria-label="Включить тёмную тему" aria-pressed="false">☾ Тёмная</button></div></section><div class="view-toolbar"><div class="view-switch" role="group" aria-label="Вид расписания"><button id="dayViewButton" type="button" aria-pressed="true">День</button><button id="weekViewButton" type="button" aria-pressed="false">Неделя</button></div><div class="accent-options" role="group" aria-label="Акцентный цвет"><button type="button" class="accent-dot" data-accent="yellow" aria-label="Жёлтый акцент" aria-pressed="true"></button><button type="button" class="accent-dot" data-accent="mint" aria-label="Мятный акцент" aria-pressed="false"></button><button type="button" class="accent-dot" data-accent="blue" aria-label="Голубой акцент" aria-pressed="false"></button><button type="button" class="accent-dot" data-accent="purple" aria-label="Сиреневый акцент" aria-pressed="false"></button><button type="button" class="accent-dot" data-accent="red" aria-label="Красный акцент" aria-pressed="false"></button></div></div></section></div><footer class="footer">7 «В» · 2026/2027 · Время по Минску</footer>
 </main><script>
 const SCHEDULE=[[{"num":1,"start":"14:00","end":"14:45","subject":"Русский язык","room":"403"},{"num":2,"start":"15:00","end":"15:45","subject":"Белорусская литература","room":"324"},{"num":3,"start":"16:00","end":"16:45","subject":"Физическая культура","room":"спорт.зал"},{"num":4,"start":"16:55","end":"17:40","subject":"Труд.обучение","room":"121/132"},{"num":5,"start":"17:50","end":"18:35","subject":"Математика","room":"403"},{"num":6,"start":"18:45","end":"19:30","subject":"Биология","room":"318"}],[{"num":1,"start":"14:00","end":"14:45","subject":"Белорусский язык","room":"324"},{"num":2,"start":"15:00","end":"15:45","subject":"Физическая культура","room":"спорт.зал"},{"num":3,"start":"16:00","end":"16:45","subject":"Математика","room":"407"},{"num":4,"start":"16:55","end":"17:40","subject":"Русский язык","room":"345"},{"num":5,"start":"17:50","end":"18:35","subject":"Русская литература","room":"345"},{"num":6,"start":"18:45","end":"19:30","subject":"Трудовое обучение","room":"121/132"}],[{"num":1,"start":"14:00","end":"14:45","subject":"ОМХК","room":"433"},{"num":2,"start":"15:00","end":"15:45","subject":"Физика","room":"416"},{"num":3,"start":"16:00","end":"16:45","subject":"История Беларуси","room":"433"},{"num":4,"start":"16:55","end":"17:40","subject":"Английский язык","room":"404/403"},{"num":5,"start":"17:50","end":"18:35","subject":"Биология","room":"318"},{"num":6,"start":"18:45","end":"19:30","subject":"Математика","room":"435"}],[{"num":0,"start":"13:00","end":"13:45","subject":"Информационный час","room":"Актовый зал","manual":true},{"num":1,"start":"14:00","end":"14:45","subject":"Белорусский язык","room":"324"},{"num":2,"start":"15:00","end":"15:45","subject":"Информатика","room":"123/125"},{"num":3,"start":"16:00","end":"16:45","subject":"Русская литература","room":"345"},{"num":4,"start":"16:55","end":"17:40","subject":"Английский язык","room":"404/403"},{"num":5,"start":"17:50","end":"18:35","subject":"Всемирная история","room":"433"},{"num":6,"start":"18:45","end":"19:30","subject":"Математика","room":"424"}],[{"num":0,"start":"13:00","end":"13:45","subject":"Классный час","room":"423","manual":true},{"num":1,"start":"14:00","end":"14:45","subject":"География","room":"310"},{"num":2,"start":"15:00","end":"15:45","subject":"Физика","room":"416"},{"num":3,"start":"16:00","end":"16:45","subject":"Химия","room":"412"},{"num":4,"start":"16:55","end":"17:40","subject":"Английский язык","room":"403/404"},{"num":5,"start":"17:50","end":"18:35","subject":"Математика","room":"424"},{"num":6,"start":"18:45","end":"19:30","subject":"Физическая культура","room":"спорт.зал"}]];
 const HOLIDAYS=[
@@ -361,8 +507,9 @@ window.addEventListener('blur',()=>dragEnd(true));
 
 function updateDaySummary(){const t=nowMinsk(),view=previousView??0,list=SCHEDULE[view];const last=list[list.length-1];const vacation=HOLIDAYS.some(h=>t.iso>=h.start&&t.iso<=h.end);const actual=view===t.day&&!vacation;const total=list.filter(l=>l.num>0).length;let text='';if(vacation&&chosen===null)text='Сейчас каникулы · время отдохнуть';else if(t.day>4&&chosen===null)text='В понедельник '+total+' '+word(total,['урок','урока','уроков'])+' · окончание в '+last.end;else if(actual){const count=list.filter(l=>l.num>0&&t.mins<toMinutes(l.end)).length;const allEnded=t.mins>=toMinutes(last.end);text=allEnded?'На сегодня всё · уроки завершены':count===1?'Остался 1 урок · домой в '+last.end:'Осталось '+count+' '+word(count,['урок','урока','уроков'])+' · домой в '+last.end}else text=total+' '+word(total,['урок','урока','уроков'])+' · окончание в '+last.end;$('daySummary').textContent=text}
 let themeMode=document.documentElement.dataset.themeMode||'auto';const systemTheme=window.matchMedia('(prefers-color-scheme: dark)');
-function updateThemeButton(){const dark=themeMode==='dark'||themeMode==='auto'&&systemTheme.matches;document.documentElement.dataset.theme=dark?'dark':'light';document.documentElement.dataset.themeMode=themeMode;$('themeToggle').textContent=themeMode==='auto'?'◐ Как на устройстве':themeMode==='dark'?'☾ Тёмная':'☀ Светлая';$('themeToggle').removeAttribute('aria-pressed');const next=themeMode==='light'?'тёмную':themeMode==='dark'?'автоматическую':'светлую';$('themeToggle').setAttribute('aria-label','Тема: '+(themeMode==='auto'?'как на устройстве':themeMode==='dark'?'тёмная':'светлая')+'. Включить '+next);document.querySelector('meta[name="theme-color"]').content=dark?'#131923':'#eeede8'}
+function updateThemeButton(){const dark=themeMode==='dark'||themeMode==='auto'&&systemTheme.matches;document.documentElement.dataset.theme=dark?'dark':'light';document.documentElement.dataset.palette=dark?'oled':'default';document.documentElement.dataset.themeMode=themeMode;$('themeToggle').textContent=themeMode==='auto'?'◐ Как на устройстве':themeMode==='dark'?'☾ Тёмная':'☀ Светлая';$('themeToggle').removeAttribute('aria-pressed');const next=themeMode==='light'?'тёмную':themeMode==='dark'?'автоматическую':'светлую';$('themeToggle').setAttribute('aria-label','Тема: '+(themeMode==='auto'?'как на устройстве':themeMode==='dark'?'тёмная':'светлая')+'. Включить '+next);document.querySelector('meta[name="theme-color"]').content=dark?'#131923':'#eeede8'}
 $('themeToggle').onclick=()=>{themeMode=themeMode==='light'?'dark':themeMode==='dark'?'auto':'light';try{localStorage.setItem('s46-7v-theme',themeMode)}catch(e){}updateThemeButton();if(!reduceMotion.matches)motion(document.querySelector('main'),[{opacity:.86},{opacity:1}],{duration:240,easing:'ease-out'})};if(systemTheme.addEventListener)systemTheme.addEventListener('change',()=>{if(themeMode==='auto')updateThemeButton()});else if(systemTheme.addListener)systemTheme.addListener(()=>{if(themeMode==='auto')updateThemeButton()});updateThemeButton();
+
 let compactMode=false,miniScrollFrame=0;
 function updateMiniLesson(){const name=document.querySelector('.hero').dataset.phase==='break'?'Перемена · '+$('breakSubject').textContent.replace('Следующий урок — ',''):$('subject').textContent,room=$('heroRoom').textContent,label=$('countLabel').textContent,count=$('count').textContent;$('miniSubject').textContent=name;$('miniRoom').textContent=room&&room!=='—'?'Каб. '+room:'7 «В»';$('miniLabel').textContent=label;$('miniCount').textContent=count;$('miniCount').classList.toggle('long',count.includes(' ч ')||count.length>8);$('miniLesson').setAttribute('aria-label',name+', '+(room!=='—'?'кабинет '+room+', ':'')+label.toLowerCase()+' '+count+'. Вернуться к карточке урока')}
 function updateCompactMode(){miniScrollFrame=0;if(scheduleView==='week')return;const hero=document.querySelector('.hero');if(!hero)return;const panel=$('days').getBoundingClientRect();const bottom=hero.getBoundingClientRect().bottom;const compact=bottom<panel.bottom+6;if(compact===compactMode)return;compactMode=compact;$('floatingControls').classList.toggle('compact',compact);$('miniHolder').setAttribute('aria-hidden',String(!compact));$('miniLesson').tabIndex=compact?0:-1}
@@ -490,7 +637,7 @@ loadScheduleFromSupabase();
 document.addEventListener('visibilitychange', () => {
   if (!document.hidden) loadScheduleFromSupabase();
 });</script>
-<button type="button" id="adminLaunch" class="admin-launch">Администратор</button>
+
 <div id="adminOverlay" class="admin-overlay" hidden role="presentation"><section class="admin-dialog" role="dialog" aria-modal="true" aria-labelledby="adminTitle"><div class="admin-head"><h3 id="adminTitle">Администратор SchoolOS</h3><button id="adminClose" class="admin-close" type="button" aria-label="Закрыть">×</button></div>
 <div id="adminLoginArea"><form id="adminLogin" class="admin-form"><label>Логин<input id="adminUsername" autocomplete="username" required value="admin"></label><label>Пароль<input id="adminPassword" type="password" autocomplete="current-password" required></label><button type="submit" class="admin-primary">Войти</button></form></div>
 <div id="adminEditorArea" hidden><div class="admin-editor-head"><strong>Редактирование уроков</strong><select id="adminDay" aria-label="День недели"><option value="0">Понедельник</option><option value="1">Вторник</option><option value="2">Среда</option><option value="3">Четверг</option><option value="4">Пятница</option></select></div><div id="adminRows"></div><div class="admin-actions"><button id="adminLogout" type="button" class="admin-secondary">Выйти</button><button id="adminSave" type="button" class="admin-primary">Сохранить изменения</button></div></div><div id="adminMessage" role="status" class="admin-msg" aria-live="polite"></div>
@@ -589,4 +736,40 @@ adminEl('adminLogin').addEventListener('submit',adminLogin);
 adminEl('adminDay').addEventListener('change',renderAdminRows);
 adminEl('adminSave').addEventListener('click',adminSave);
 adminEl('adminLogout').addEventListener('click',adminLogout);
+
+/* Open-Meteo: фактическая погода Витебска; при отсутствии сети не показываем неверные данные. */
+(function(){
+ const wrap=document.getElementById('weatherNow'), art=document.getElementById('weatherArt'), degree=document.getElementById('weatherDegree');
+ if(!wrap||!art||!degree)return;
+ const paths={
+  sun:'<circle cx="36" cy="29" r="16"/><path d="M36 4v5M36 49v5M11 29h6M55 29h6M18 11l5 5M49 42l5 5M54 11l-5 5M23 42l-5 5"/>',
+  cloud:'<path d="M18 43h34a11 11 0 0 0 0-22 17 17 0 0 0-32-2 12 12 0 0 0-2 24Z"/>',
+  rain:'<path d="M18 36h34a11 11 0 0 0 0-22 17 17 0 0 0-32-2 12 12 0 0 0-2 24Z"/><path d="M24 44l-3 7M37 44l-3 7M50 44l-3 7"/>',
+  snow:'<path d="M18 34h34a11 11 0 0 0 0-22 17 17 0 0 0-32-2 12 12 0 0 0-2 24Z"/><path d="M25 42v11m-5-5.5h10m-8-3 6 6m0-6-6 6M46 42v11m-5-5.5h10m-8-3 6 6m0-6-6 6"/>',
+  storm:'<path d="M18 35h34a11 11 0 0 0 0-22 17 17 0 0 0-32-2 12 12 0 0 0-2 24Z"/><path d="M38 38l-9 12h8l-3 9 13-16h-9l5-5"/>',
+  fog:'<path d="M16 19h40M9 29h54M16 39h40M21 49h30"/>'
+ };
+ function showCloudWithoutTemp(){
+  art.innerHTML='<svg viewBox="0 0 72 62" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6">'+paths.cloud+'</g></svg>';
+  degree.textContent='';degree.hidden=true;wrap.hidden=false;
+  wrap.title='Витебск · данные о погоде временно недоступны';
+ }
+ showCloudWithoutTemp();
+ function icon(code){if([95,96,99].includes(code))return 'storm';if([71,73,75,77,85,86].includes(code))return 'snow';if([51,53,55,56,57,61,63,65,66,67,80,81,82].includes(code))return 'rain';if([45,48].includes(code))return 'fog';if([1,2,3].includes(code))return 'cloud';return 'sun'}
+ async function update(){
+  try{
+   const controller=new AbortController(); const timer=setTimeout(()=>controller.abort(),8500);
+   let result;
+   try{result=await fetch('https://api.open-meteo.com/v1/forecast?latitude=55.1904&longitude=30.2049&current=temperature_2m,weather_code&timezone=Europe%2FMinsk',{signal:controller.signal,cache:'no-store'})}finally{clearTimeout(timer)}
+   if(!result.ok)throw Error('Weather unavailable');
+   const data=await result.json(), current=data.current;
+   if(!current||!Number.isFinite(current.temperature_2m))throw Error('Missing weather data');
+   const code=Number(current.weather_code), kind=icon(code),temp=Math.round(current.temperature_2m);
+   art.innerHTML='<svg viewBox="0 0 72 62" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6">'+paths[kind]+'</g></svg>';
+   degree.textContent=(temp>0?'+':'')+temp+'°';degree.hidden=false;
+   wrap.title='Витебск · '+degree.textContent;wrap.hidden=false;
+  }catch(e){showCloudWithoutTemp()}
+ }
+ update();setInterval(update,20*60*1000);
+})();
 </script></body></html>
