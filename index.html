@@ -566,7 +566,15 @@ renderBase = function(){
    $('nextLabel').textContent='Куда идти дальше';
    $('nextRoomPill').style.fontWeight='800';
  } else $('nextRoomPill').style.fontWeight='750';
- if(beforeStart) $('nextLabel').textContent='Первый урок сегодня';
+ if(beforeStart){
+   // До начала занятий главная карточка и нижняя карточка должны указывать на один первый урок.
+   const first=lessons[0];
+   $('nextLabel').textContent='Первый урок сегодня';
+   $('nextTitle').textContent=first.subject;
+   $('nextMeta').textContent=first.start+' · Каб. '+(first.room||'—');
+   nextRoom.textContent='Каб. '+(first.room||'—');
+   nextRoom.hidden=false;
+ }
  // In a vacation or on another selected day never claim a live class.
  if(vacation&&chosen===null){$('status').textContent='КАНИКУЛЫ';$('countLabel').textContent='Отдыхай и набирайся сил'}
 };
